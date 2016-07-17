@@ -81,7 +81,7 @@ ${Router(state, [
 ])}
 ```
 
-dispatcher
+Dispatcher
 ----------
 
-The router is not much use without the dispatcher, this is very similar to flux and redux, but not a complicated. It simply takes a basic state and a update command that just needs the state, then it will worry about rendering.
+The router is not much use without the dispatcher, this is very similar to flux and redux, but not as complicated. It simply takes a basic state and an update command that just needs the state, then it will worry about rendering.
