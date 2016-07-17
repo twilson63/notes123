@@ -34,7 +34,7 @@ module.exports = (dispatch, e$) => {
         <div class="form-group">
           <input type="text" class="form-control"
             name="title" placeholder="Title"
-            value="${state.doc ? state.doc.server : ''}"
+            value="${state.doc ? state.doc.title : ''}"
           >
         </div>
         <div class="form-group">

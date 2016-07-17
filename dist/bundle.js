@@ -108,7 +108,7 @@ module.exports = function (dispatch, e$) {
     return yo(_templateObject, doc._id, doc._rev);
   };
   return function (state) {
-    return yo(_templateObject2, state.leaving ? 'fadeOut' : 'fadeIn', state.doc && state.doc._id ? hidden(state.doc) : null, state.doc ? state.doc.server : '', state.doc ? state.doc.description : null);
+    return yo(_templateObject2, state.leaving ? 'fadeOut' : 'fadeIn', state.doc && state.doc._id ? hidden(state.doc) : null, state.doc ? state.doc.title : '', state.doc ? state.doc.description : null);
   };
 };
 },{"form-serialize":13,"uuid":22,"yo-yo":24}],4:[function(require,module,exports){
@@ -120,7 +120,7 @@ function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defi
 var yo = require('yo-yo');
 
 var Item = function (doc) {
-  return yo(_templateObject, doc._id, doc.server);
+  return yo(_templateObject, doc._id, doc.title);
 };
 
 module.exports = function (state) {
@@ -149,7 +149,7 @@ var yo = require('yo-yo');
 */
 
 module.exports = function (state) {
-  return yo(_templateObject, state.route === '/' ? yo(_templateObject2, state.title) : null, state.route === '/new' ? yo(_templateObject3) : null, state.route === '/edit' ? yo(_templateObject4) : null, state.route === '/remove' ? yo(_templateObject5) : null, state.route === '/show' ? yo(_templateObject6, state.doc.server) : null, state.route === '/' ? yo(_templateObject7) : null, state.route === '/show' ? yo(_templateObject8, state.doc._id, state.showMenu ? 1 : 0) : null);
+  return yo(_templateObject, state.route === '/' ? yo(_templateObject2, state.title) : null, state.route === '/new' ? yo(_templateObject3) : null, state.route === '/edit' ? yo(_templateObject4) : null, state.route === '/remove' ? yo(_templateObject5) : null, state.route === '/show' ? yo(_templateObject6, state.doc.title) : null, state.route === '/' ? yo(_templateObject7) : null, state.route === '/show' ? yo(_templateObject8, state.doc._id, state.showMenu ? 1 : 0) : null);
 };
 },{"yo-yo":24}],6:[function(require,module,exports){
 var _templateObject = _taggedTemplateLiteral(['\n    <section class="animated ', ' m-t-1">\n      <h1>Remove ', '</h1>\n      <p>Are you sure?</p>\n      <button id="confirm" class="btn btn-block btn-success-outline">Yes</button>\n      <a class="btn btn-block btn-secondary-outline" href="/show?id=', '">No</button>\n    </section>\n    '], ['\n    <section class="animated ', ' m-t-1">\n      <h1>Remove ', '</h1>\n      <p>Are you sure?</p>\n      <button id="confirm" class="btn btn-block btn-success-outline">Yes</button>\n      <a class="btn btn-block btn-secondary-outline" href="/show?id=', '">No</button>\n    </section>\n    ']);

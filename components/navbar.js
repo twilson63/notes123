@@ -26,7 +26,7 @@ module.exports = state => yo`
       ${state.route === '/show' ? yo`
         <a class="navbar-brand" href="/">
           <i class="ion-chevron-left size-24"></i>
-          ${state.doc.server}
+          ${state.doc.title}
         </a>` : null}
 
       ${state.route === '/' ? yo`

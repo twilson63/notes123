@@ -9,7 +9,8 @@
     "build": "browserify browser.js -t es2020 -o dist/bundle.js",
     "uglify": "uglifyjs dist/bundle.js -o dist/bundle.min.js",
     "start": "node server.js",
-    "serve": "wzrd browser.js -- -t es2020 -d"
+    "serve": "wzrd browser.js -- -t es2020 -d",
+    "deploy": "npm run build && npm run uglify"
   },
   "keywords": [],
   "author": "Tom",

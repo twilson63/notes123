@@ -2,7 +2,7 @@ const yo = require('yo-yo')
 
 const Item = doc => yo`
 <a class="list-group-item" href="/show?id=${doc._id}">
-  ${doc.server}
+  ${doc.title}
 </a>
 `
 
