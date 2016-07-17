@@ -14,6 +14,8 @@ http
     if (req.url === '/browser.js') {
       req.url = '/dist/bundle.min.js'
       serve(req, res)
+    } else if (/\.(png|ico)$/.test(req.url)) {
+      serve(req, res)
     } else {
       req.url = '/index.html'
       serve(req, res)
