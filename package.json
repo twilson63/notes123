@@ -1,0 +1,36 @@
+{
+  "name": "pouchcloud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard components/*.js *.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify browser.js -t es2020 -o dist/bundle.js",
+    "uglify": "uglifyjs dist/bundle.js -o dist/bundle.min.js",
+    "start": "node server.js",
+    "serve": "wzrd browser.js -- -t es2020 -d"
+  },
+  "keywords": [],
+  "author": "Tom",
+  "license": "ISC",
+  "dependencies": {
+    "domify": "^1.4.0",
+    "ecstatic": "^1.4.1",
+    "form-serialize": "^0.7.1",
+    "marked": "^0.3.5",
+    "most": "^0.19.7",
+    "pouchdb-http": "^5.4.5",
+    "ramda": "^0.21.0",
+    "uuid": "^2.0.2",
+    "wayfarer": "^6.1.5",
+    "xtend": "^4.0.1",
+    "yo-yo": "^1.2.2"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.1",
+    "es2020": "^1.1.7",
+    "standard": "^7.1.2",
+    "uglify-js": "^2.7.0"
+  }
+}
