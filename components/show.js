@@ -1,4 +1,5 @@
 const yo = require('yo-yo')
+const domify = require('domify')
 
 /*
 
@@ -20,7 +21,7 @@ module.exports = (dispatch, e$) => {
 
   return state => yo`
     <section class="animated ${state.leaving ? 'fadeOut' : 'fadeIn'} m-t-1">
-      <article id="article1" style="height: 400px;">${state.doc.html}</artcle>
+      <article id="article1" style="height: 400px;">${domify(state.doc.html)}</artcle>
       <footer class="${state.showMenu ? 'animated slideInUp' : 'animated slideOutDown'} navbar navbar-fixed-bottom navbar-light bg-faded">
         <a class="btn btn-block btn-primary-outline" href="/edit?id=${state.doc._id}">
           <i class="size-24 ion-ios-compose-outline"></i>

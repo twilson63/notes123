@@ -1,9 +1,6 @@
 const db = PouchDB('http://server.pouchcloud.com/servers')
 const xtend = require('xtend')
 const marked = require('marked')
-const domify = require('domify')
-
-const md2html = R.compose(domify, marked)
 
 const qs = require('./qs')
 
@@ -23,7 +20,7 @@ module.exports = (s, update) => {
         state = xtend(state, { showMenu: !parseInt(params.menu || 1, 10) })
         if (params.id) {
           db.get(params.id).then(doc => {
-            doc.html = md2html(doc.description)
+            doc.html = marked(doc.description)
             state = xtend(state, {doc: doc})
             return state
           }).then(state => update(state))
